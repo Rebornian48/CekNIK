@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebornian48 - Cek NIK</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-red-500 py-4">
+        <h1 class="text-white text-2xl text-center">Rebornian48 - Cek NIK</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div id="info-section" class="text-center mb-4">
+            Data kode provinsi, kabupaten dan kota, serta kecamatan diambil dari <a
+                href="https://sig.bps.go.id/bridging-kode/index" class="text-blue-500 underline">https://sig.bps.go.id/bridging-kode/index</a>
+        </div>
+        <div id="searchInput" class="flex items-center justify-center mb-4">
+            <input type="text" id="search" placeholder="Masukkan NIK" maxlength=16 required
+                class="border border-gray-300 rounded-md px-4 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button id="searchBtn" onclick="parseNIK()"
+                class="bg-red-500 text-white rounded-md px-4 py-2 focus:outline-none hover:bg-red-600">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div id="searchResult" class="bg-white rounded-md shadow-md p-4"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-4">
+        <p class="text-center">Dibangun oleh Rebornian48</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/luxon.js"></script>
+    <script src="./assets/js/kawasan.js"></script>
+    <script src="./assets/js/prov.js"></script>
+    <script src="./assets/js/kabkot.js"></script>
+    <script src="./assets/js/kec.js"></script>
+</body>
+
+</html>
