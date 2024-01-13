@@ -7,11 +7,11 @@ function parseNIK() {
   var searchText = searchInput.value;
   var wil, reg, prov, kabkot, kec, tgl, bln, thn, unik, jk, tahun;
 
-  if (searchText.length != 16) {
+  if (searchText.length !== 16) {
     alert("NIK harus 16 digit!");
   } else if (isNaN(searchText)) {
     alert("NIK harus berupa angka!");
-  } else if (searchText.length == 0) {
+  } else if (searchText.length === 0) {
     alert("NIK harus diisi!");
   } else {
     wil = searchText.substring(0, 1);
@@ -23,12 +23,12 @@ function parseNIK() {
     thn = searchText.substring(10, 12);
     unik = searchText.substring(12, 16);
 
-    reg = kawasan(parseInt(wil));
+    reg = kawasan(wil);
     namaProv = getNamaProv(prov);
     namaKabkot = getNamaKabKot(prov + "." + kabkot);
     namaKec = getNamaKec(kec);
 
-    jk = parseInt(tgl) / 40;
+    jk = parseInt(tgl,10) / 40;
     jk = Math.floor(jk);
     if (jk == 1) {
       jk = "Perempuan";
@@ -47,7 +47,7 @@ function parseNIK() {
     var pasaran = new Array("Legi", "Pahing", "Pon", "Wage", "Kliwon");
 
     // Parse the date
-    var date = new Date(thn, parseInt(bln) - 1, tgl % 40);
+    var date = new Date(thn, parseInt(bln,10) - 1, tgl % 40);
     var d1 = new Date("2014-01-28");
     var selisih = Math.floor(Math.abs(d1 - date) / 86400000);
     var pasar = pasaran[selisih % 5];
@@ -100,7 +100,7 @@ function parseNIK() {
       jk +
       "</p>" +
       "<p>Urutan ke: " +
-      parseInt(unik) +
+      parseInt(unik,10) +
       "</p>";
   }
 }
