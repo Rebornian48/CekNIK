@@ -2,6 +2,12 @@
  * ${1:Description placeholder}
  * @date 1/13/2024 - 3:11:50 AM
  */
+
+/**
+ * Parses the NIK (Nomor Induk Kependudukan) and displays the result.
+ */
+
+
 function parseNIK() {
   var searchInput = document.getElementById("search");
   var searchText = searchInput.value;

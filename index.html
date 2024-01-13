@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF6QHSQGFP"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QF6QHSQGFP"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag("config", "G-QF6QHSQGFP");
+      gtag("config", "G-QF6QHSQGFP");
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -19,89 +21,151 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="author" content="Rebornian48" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rebornian48 - Cek NIK</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="navbar bg-base-100">
-        <div class="flex-1">
-            <a class="btn btn-ghost text-xl">Rebornian48</a>
-        </div>
-        <div class="flex-none">
-            <ul class="menu menu-horizontal px-1">
-                <div class="dropdown mb-5">
-                    <div tabindex="0" role="button" class="m-1">
-                        Tema
-                        <svg width="12px" height="12px" class="h-2 w-2 fill-current opacity-60 inline-block"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
-                            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-                        </svg>
-                    </div>
-                    <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
-                        <li><input type="radio" name="theme-dropdown"
-                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                                aria-label="Gelap" value="dark" /></li>
-                        <li><input type="radio" name="theme-dropdown"
-                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Terang"
-                                value="light" /></li>
-                        <li><input type="radio" name="theme-dropdown"
-                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Malam"
-                                value="night" /></li>
-                        <li><input type="radio" name="theme-dropdown"
-                                class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Senja"
-                                value="sunset" /></li>
-                    </ul>
-                </div>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl">Rebornian48</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <div class="dropdown mb-5">
+            <div tabindex="0" role="button" class="m-1">
+              Tema
+              <svg
+                width="12px"
+                height="12px"
+                class="h-2 w-2 fill-current opacity-60 inline-block"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 2048 2048"
+              >
+                <path
+                  d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"
+                ></path>
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52"
+            >
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Gelap"
+                  value="dark"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Terang"
+                  value="light"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Malam"
+                  value="night"
+                />
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  name="theme-dropdown"
+                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  aria-label="Senja"
+                  value="sunset"
+                />
+              </li>
             </ul>
-        </div>
+          </div>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        </ul>
+      </div>
     </div>
     <div class="hero min-h-screen bg-base-100">
-        <div class="hero-content text-center">
-            <div class="max-w-md">
-                <h1 class="text-5xl font-bold">Cek NIK</h1>
-                <div class="text-base-content mt-2">
-                    <span>Data kode provinsi, kabupaten dan kota, serta kecamatan diambil dari <a
-                            href="https://sig.bps.go.id/bridging-kode/index"
-                            class="text-blue-500 underline">https://sig.bps.go.id/bridging-kode/index</a>
-                    </span>
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Cek NIK</h1>
+          <div class="text-base-content mt-2">
+            <span
+              >Data kode provinsi, kabupaten dan kota, serta kecamatan diambil
+              dari
+              <a
+                href="https://sig.bps.go.id/bridging-kode/index"
+                class="text-blue-500 underline"
+                >https://sig.bps.go.id/bridging-kode/index</a
+              >
+            </span>
+          </div>
+          <h1 class="text-5xl">&nbsp;</h1>
+          <main>
+            <div class="search" id="feature-search">
+              <label class="form-control">
+                <div class="label">
+                  <span class="label-text">Masukkan NIK di sini</span>
                 </div>
-                <h1 class="text-5xl">&nbsp;</h1>
-                <main>
-                    <div class="search" id="feature-search">
-                        <label class="form-control">
-                            <div class="label">
-                                <span class="label-text">Masukkan NIK di sini</span>
-                            </div>
-                            <div id="searchInput" class="flex items-center justify-center mb-4">
-                                <input type="text" id="search" placeholder="Masukkan NIK" maxlength=16 required
-                                    class="input input-bordered w-full">
-                                <button id="searchBtn" onclick="parseNIK()"
-                                    class="rounded-md px-4 py-2 focus:outline-none">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </label>
-                    </div>
-                </main>
-                <h1 class="text-5xl">&nbsp;</h1>
-                <div id="searchResult"></div>
-                <h1 class="text-5xl">&nbsp;</h1>
-                <footer>
-                    <p class="text-center">Dibangun oleh <a href="https://rebornian48.github.io/">Rebornian48</a></p>
-                </footer>
+                <div
+                  id="searchInput"
+                  class="flex items-center justify-center mb-4"
+                >
+                  <input
+                    type="text"
+                    id="search"
+                    placeholder="Masukkan NIK"
+                    maxlength="16"
+                    required
+                    class="input input-bordered w-full"
+                  />
+
+                  <button
+                    id="searchBtn"
+                    onclick="parseNIK()"
+                    class="rounded-md px-4 py-2 focus:outline-none"
+                  >
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </label>
             </div>
+          </main>
+          <h1 class="text-5xl">&nbsp;</h1>
+          <div id="searchResult"></div>
+          <h1 class="text-5xl">&nbsp;</h1>
+          <footer>
+            <p class="text-center">
+              Dibangun oleh
+              <a href="https://rebornian48.github.io/">Rebornian48</a>
+            </p>
+          </footer>
         </div>
+      </div>
     </div>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/luxon.js"></script>
@@ -109,6 +173,5 @@
     <script src="./assets/js/prov.js"></script>
     <script src="./assets/js/kabkot.js"></script>
     <script src="./assets/js/kec.js"></script>
-</body>
-
+  </body>
 </html>
