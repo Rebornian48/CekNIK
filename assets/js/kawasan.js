@@ -7,7 +7,7 @@
  */
 function kawasan(wil) {
   var reg;
-  switch (parseInt(wil,10)) {
+  switch (parseInt(wil, 10)) {
     case 1:
       reg = "Sumatera";
       break;
