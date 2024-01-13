@@ -30,7 +30,7 @@ function parseNIK() {
 
     jk = parseInt(tgl, 10) / 40;
     jk = Math.floor(jk);
-    if (jk == 1) {
+    if (jk === 1) {
       jk = "Perempuan";
     } else {
       jk = "Laki-laki";
@@ -49,7 +49,8 @@ function parseNIK() {
     // Parse the date
     var date = new Date(thn, parseInt(bln, 10) - 1, tgl % 40);
     var d1 = new Date("2014-01-28");
-    var selisih = Math.floor(Math.abs(d1 - date) / 86400000);
+    var d = 86400000;
+    var selisih = Math.floor(Math.abs(d1 - date) / d);
     var pasar = pasaran[selisih % 5];
     // Parse the date for human
     var idDate = new Intl.DateTimeFormat("id-ID", {
