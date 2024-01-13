@@ -28,7 +28,7 @@ function parseNIK() {
     namaKabkot = getNamaKabKot(prov + "." + kabkot);
     namaKec = getNamaKec(kec);
 
-    jk = parseInt(tgl,10) / 40;
+    jk = parseInt(tgl, 10) / 40;
     jk = Math.floor(jk);
     if (jk == 1) {
       jk = "Perempuan";
@@ -47,7 +47,7 @@ function parseNIK() {
     var pasaran = new Array("Legi", "Pahing", "Pon", "Wage", "Kliwon");
 
     // Parse the date
-    var date = new Date(thn, parseInt(bln,10) - 1, tgl % 40);
+    var date = new Date(thn, parseInt(bln, 10) - 1, tgl % 40);
     var d1 = new Date("2014-01-28");
     var selisih = Math.floor(Math.abs(d1 - date) / 86400000);
     var pasar = pasaran[selisih % 5];
@@ -100,7 +100,7 @@ function parseNIK() {
       jk +
       "</p>" +
       "<p>Urutan ke: " +
-      parseInt(unik,10) +
+      parseInt(unik, 10) +
       "</p>";
   }
 }
