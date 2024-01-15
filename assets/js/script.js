@@ -53,7 +53,8 @@ function parseNIK() {
     // Parse the date
     var date = new Date(thn, parseInt(bln, 10) - 1, tgl % 40);
     var d1 = new Date("2014-01-28");
-    var d = 86400000;
+    const newLocal = 86400000;
+    var d = newLocal;
     var selisih = Math.floor(Math.abs(d1 - date) / d);
     var pasar = pasaran[selisih % 5];
     // Parse the date for human
