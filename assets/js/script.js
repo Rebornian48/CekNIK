@@ -1,13 +1,11 @@
-/**
- * ${1:Description placeholder}
- * @date 1/13/2024 - 3:11:50 AM
- */
+var btn = document.getElementById("searchBtn");
+btn.addEventListener("click", parseNIK);
 
 /**
  * Parses the NIK (Nomor Induk Kependudukan) and displays the result.
+ * ${1:Description placeholder}
+ * @date 1/13/2024 - 3:11:50 AM
  */
-
-
 function parseNIK() {
   var searchInput = document.getElementById("search");
   var searchText = searchInput.value;
