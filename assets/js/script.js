@@ -77,7 +77,7 @@ function parseNIK() {
       year: "numeric",
     }).format(date);
     // Display the result
-    document.getElementById("searchResult").innerHTML =
+    document.getElementById("searchResult").textContent =
       "<p>Regional / Wilayah: " +
       reg +
       "</p>" +
