@@ -1,5 +1,65 @@
+/**
+ * Description placeholder
+ * @date 1/17/2024 - 12:12:40 AM
+ *
+ * @type {*}
+ */
 var btn = document.getElementById("searchBtn");
 btn.addEventListener("click", parseNIK);
+
+/**
+ * Description placeholder
+ * @date 1/17/2024 - 12:12:40 AM
+ *
+ * @param {*} tanggal
+ * @param {*} bulan
+ * @returns {("Tanggal salah!!" | "belum" | "Aquarius" | "Pisces" | "Aries" | "Taurus" | "Gemini" | "Cancer" | "Leo" | "Virgo" | "Libra" | "Scorpio" | "Sagitarius" | "Capricorn")}
+ */
+function searchZodiak(tanggal, bulan) {
+  // batas tanggal pada bulan
+  if (
+    (bulan == 1 && tanggal > 31) ||
+    (bulan == 2 && tanggal > 29) ||
+    (bulan == 3 && tanggal > 31) ||
+    (bulan == 4 && tanggal > 30) ||
+    (bulan == 5 && tanggal > 31) ||
+    (bulan == 6 && tanggal > 30) ||
+    (bulan == 7 && tanggal > 31) ||
+    (bulan == 8 && tanggal > 31) ||
+    (bulan == 9 && tanggal > 30) ||
+    (bulan == 10 && tanggal > 31) ||
+    (bulan == 11 && tanggal > 30) ||
+    (bulan == 12 && tanggal > 31)
+  )
+    return "Tanggal salah!!";
+
+  if (bulan == "" && tanggal == "") return "belum";
+
+  if ((bulan == 1 && tanggal >= 20) || (bulan == 2 && tanggal <= 18))
+    return "Aquarius";
+  if ((bulan == 2 && tanggal >= 19) || (bulan == 3 && tanggal <= 20))
+    return "Pisces";
+  if ((bulan == 3 && tanggal >= 21) || (bulan == 4 && tanggal <= 19))
+    return "Aries";
+  if ((bulan == 4 && tanggal >= 20) || (bulan == 5 && tanggal <= 20))
+    return "Taurus";
+  if ((bulan == 5 && tanggal >= 21) || (bulan == 6 && tanggal <= 21))
+    return "Gemini";
+  if ((bulan == 6 && tanggal >= 22) || (bulan == 7 && tanggal <= 22))
+    return "Cancer";
+  if ((bulan == 7 && tanggal >= 23) || (bulan == 8 && tanggal <= 22))
+    return "Leo";
+  if ((bulan == 8 && tanggal >= 23) || (bulan == 9 && tanggal <= 22))
+    return "Virgo";
+  if ((bulan == 9 && tanggal >= 23) || (bulan == 10 && tanggal <= 22))
+    return "Libra";
+  if ((bulan == 10 && tanggal >= 23) || (bulan == 11 && tanggal <= 21))
+    return "Scorpio";
+  if ((bulan == 11 && tanggal >= 22) || (bulan == 12 && tanggal <= 21))
+    return "Sagitarius";
+  if ((bulan == 12 && tanggal >= 22) || (bulan == 1 && tanggal <= 19))
+    return "Capricorn";
+}
 
 /**
  * Parses the NIK (Nomor Induk Kependudukan) and displays the result.
@@ -89,6 +149,8 @@ function parseNIK() {
     document.getElementById("hijriResult").textContent = hijriDate;
     document.getElementById("sakaResult").textContent = sakaDate;
     document.getElementById("jkResult").textContent = jk;
+    document.getElementById("zodiakResult").textContent = searchZodiak(tgl, bln);
+    document.getElementById("shioResult").textContent = new ZodiacSign(date).chinese["yinyang"] + " " + new ZodiacSign(date).chinese["element"] + " " + new ZodiacSign(date).chinese["sign"];
     document.getElementById("unikResult").textContent = parseInt(unik, 10);
   }
 }
