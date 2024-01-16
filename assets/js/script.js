@@ -151,7 +151,7 @@ function parseNIK() {
     document.getElementById("jkResult").textContent = jk;
     document.getElementById("zodiakResult").textContent = searchZodiak(
       tgl,
-      bln
+      bln,
     );
     document.getElementById("shioResult").textContent =
       new ZodiacSign(date).chinese["yinyang"] +
