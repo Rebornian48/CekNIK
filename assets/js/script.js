@@ -79,6 +79,7 @@ function parseNIK() {
     }).format(date);
 
     // Display the result
+    document.getElementById("result").style.display = "block";
     document.getElementById("regResult").textContent = reg;
     document.getElementById("provResult").textContent = namaProv;
     document.getElementById("kabkotResult").textContent = namaKabkot;
