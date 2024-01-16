@@ -18,18 +18,18 @@ btn.addEventListener("click", parseNIK);
 function searchZodiak(tanggal, bulan) {
   // batas tanggal pada bulan
   if (
-    (bulan == 1 && tanggal > 31) ||
-    (bulan == 2 && tanggal > 29) ||
-    (bulan == 3 && tanggal > 31) ||
-    (bulan == 4 && tanggal > 30) ||
-    (bulan == 5 && tanggal > 31) ||
-    (bulan == 6 && tanggal > 30) ||
-    (bulan == 7 && tanggal > 31) ||
-    (bulan == 8 && tanggal > 31) ||
-    (bulan == 9 && tanggal > 30) ||
-    (bulan == 10 && tanggal > 31) ||
-    (bulan == 11 && tanggal > 30) ||
-    (bulan == 12 && tanggal > 31)
+    (bulan === 1 && tanggal > 31) ||
+    (bulan === 2 && tanggal > 29) ||
+    (bulan === 3 && tanggal > 31) ||
+    (bulan === 4 && tanggal > 30) ||
+    (bulan === 5 && tanggal > 31) ||
+    (bulan === 6 && tanggal > 30) ||
+    (bulan === 7 && tanggal > 31) ||
+    (bulan === 8 && tanggal > 31) ||
+    (bulan === 9 && tanggal > 30) ||
+    (bulan === 10 && tanggal > 31) ||
+    (bulan === 11 && tanggal > 30) ||
+    (bulan === 12 && tanggal > 31)
   )
     return "Tanggal salah!!";
 
@@ -149,8 +149,16 @@ function parseNIK() {
     document.getElementById("hijriResult").textContent = hijriDate;
     document.getElementById("sakaResult").textContent = sakaDate;
     document.getElementById("jkResult").textContent = jk;
-    document.getElementById("zodiakResult").textContent = searchZodiak(tgl, bln);
-    document.getElementById("shioResult").textContent = new ZodiacSign(date).chinese["yinyang"] + " " + new ZodiacSign(date).chinese["element"] + " " + new ZodiacSign(date).chinese["sign"];
+    document.getElementById("zodiakResult").textContent = searchZodiak(
+      tgl,
+      bln
+    );
+    document.getElementById("shioResult").textContent =
+      new ZodiacSign(date).chinese["yinyang"] +
+      " " +
+      new ZodiacSign(date).chinese["element"] +
+      " " +
+      new ZodiacSign(date).chinese["sign"];
     document.getElementById("unikResult").textContent = parseInt(unik, 10);
   }
 }
