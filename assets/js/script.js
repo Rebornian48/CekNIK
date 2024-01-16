@@ -64,6 +64,7 @@ function parseNIK() {
       month: "long",
       year: "numeric",
     }).format(date);
+    
     // Parse the date to Hijri
     var hijriDate = new Intl.DateTimeFormat("id-ID-u-ca-islamic", {
       day: "numeric",
@@ -76,37 +77,17 @@ function parseNIK() {
       month: "long",
       year: "numeric",
     }).format(date);
+
     // Display the result
-    document.getElementById("searchResult").textContent =
-      "<p>Regional / Wilayah: " +
-      reg +
-      "</p>" +
-      "<p>Provinsi: " +
-      namaProv +
-      "</p>" +
-      "<p>Kabupaten/Kota: " +
-      namaKabkot +
-      "</p>" +
-      "<p>Kecamatan: " +
-      namaKec +
-      "</p>" +
-      "<p>Tanggal Lahir: " +
-      idDate +
-      "</p>" +
-      "<p>Hari Pasaran / Pancawara: " +
-      pasar +
-      "</p>" +
-      "<p>Tanggal Lahir (dalam Tahun Islam/Hijriah): " +
-      hijriDate +
-      "</p>" +
-      "<p>Tanggal Lahir (dalam Tahun Saka): " +
-      sakaDate +
-      "</p>" +
-      "<p>Jenis Kelamin: " +
-      jk +
-      "</p>" +
-      "<p>Urutan ke: " +
-      parseInt(unik, 10) +
-      "</p>";
+    document.getElementById("regResult").textContent = reg;
+    document.getElementById("provResult").textContent = namaProv;
+    document.getElementById("kabkotResult").textContent = namaKabkot;
+    document.getElementById("kecResult").textContent = namaKec;
+    document.getElementById("tglResult").textContent = idDate;
+    document.getElementById("pasarResult").textContent = pasar;
+    document.getElementById("hijriResult").textContent = hijriDate;
+    document.getElementById("sakaResult").textContent = sakaDate;
+    document.getElementById("jkResult").textContent = jk;
+    document.getElementById("unikResult").textContent = parseInt(unik, 10);
   }
 }
