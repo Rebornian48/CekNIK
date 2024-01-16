@@ -64,7 +64,7 @@ function parseNIK() {
       month: "long",
       year: "numeric",
     }).format(date);
-    
+
     // Parse the date to Hijri
     var hijriDate = new Intl.DateTimeFormat("id-ID-u-ca-islamic", {
       day: "numeric",
