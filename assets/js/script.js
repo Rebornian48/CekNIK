@@ -95,7 +95,9 @@ function parseNIK() {
     document.getElementById("hijriResult").textContent = hijriDate;
     document.getElementById("sakaResult").textContent = sakaDate;
     document.getElementById("jkResult").textContent = jk;
-    document.getElementById("zodiakResult").textContent = new ZodiacSign(date).sign;
+    document.getElementById("zodiakResult").textContent = new ZodiacSign(
+      date
+    ).sign;
     document.getElementById("shioResult").textContent =
       new ZodiacSign(date).chinese["yinyang"] +
       " " +
