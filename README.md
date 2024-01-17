@@ -15,9 +15,9 @@ Fitur yang tersedia:
 
 Sumber Referensi
 
-1. Kode Wilayah : https://sig.bps.go.id/bridging-kode/index
-2. Zodiak dan Shio : https://cdn.jsdelivr.net/gh/besrourms/zodiacsigns@latest/index.min.js
-3. Format Tanggal dan Waktu : [luxon.](https://moment.github.io/luxon/#/)https://moment.github.io/luxon/#/
+1. Kode Wilayah : <https://sig.bps.go.id/bridging-kode/index>
+2. Zodiak dan Shio : <https://cdn.jsdelivr.net/gh/besrourms/zodiacsigns@latest/index.min.js>
+3. Format Tanggal dan Waktu : [luxon.](https://moment.github.io/luxon/#/)<https://moment.github.io/luxon/#/>
 
 Pengembangan Selanjutnya
 
