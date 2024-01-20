@@ -24,19 +24,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rebornian48 - Cek NIK</title>
-    
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://avatars.githubusercontent.com/u/80138640"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.4.0/css/all.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
@@ -114,17 +119,6 @@
       <div class="hero-content text-center">
         <div class="max-w-md">
           <h1 class="text-5xl font-bold">Cek NIK</h1>
-          <div class="text-base-content mt-2">
-            <span
-              >Data kode provinsi, kabupaten dan kota, serta kecamatan diambil
-              dari
-              <a
-                href="https://sig.bps.go.id/bridging-kode/index"
-                class="text-blue-500 underline"
-                >https://sig.bps.go.id/bridging-kode/index</a
-              >
-            </span>
-          </div>
           <h1 class="text-5xl">&nbsp;</h1>
           <main>
             <div class="search" id="feature-search">
@@ -163,12 +157,20 @@
             <h4>Kecamatan: <span id="kecResult"></span></h4>
             <h4>Tanggal Lahir: <span id="tglResult"></span></h4>
             <h4>Hari Pasaran / Pancawara: <span id="pasarResult"></span></h4>
-            <h4>Tanggal Lahir (dalam Tahun Islam/Hijriah): <span id="hijriResult"></span></h4>
-            <h4>Tanggal Lahir (dalam Tahun Saka/Hindu): <span id="sakaResult"></span></h4>
+            <h4>
+              Tanggal Lahir (dalam Tahun Islam/Hijriah):
+              <span id="hijriResult"></span>
+            </h4>
+            <h4>
+              Tanggal Lahir (dalam Tahun Saka/Hindu):
+              <span id="sakaResult"></span>
+            </h4>
             <h4>Jenis Kelamin: <span id="jkResult"></span></h4>
             <h4>Zodiak: <span id="zodiakResult"></span></h4>
             <h4>Shio: <span id="shioResult"></span></h4>
-            <h4>Urutan dalam satu wilayah kecamatan: <span id="unikResult"></span></h4>
+            <h4>
+              Urutan dalam satu wilayah kecamatan: <span id="unikResult"></span>
+            </h4>
           </div>
           <h1 class="text-5xl">&nbsp;</h1>
           <footer>
