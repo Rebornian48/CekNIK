@@ -45,11 +45,10 @@
   </head>
 
   <body>
-    <div class="hero min-h-screen bg-base-100">
-      <div class="hero-content text-center">
-        <div class="max-w-md">
-          <h1 class="text-5xl font-bold">Cek NIK</h1>
-          <h1 class="text-5xl">&nbsp;</h1>
+    <div class="bg-gray-900 py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="relative isolate flex flex-col gap-10 overflow-hidden px-6 py-24 sm:rounded-3xl sm:px-24 xl:flex-row xl:items-center xl:py-32">
+          <h2 class="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl xl:max-w-none xl:flex-auto">Cek NIK</h2>
           <main>
             <div class="search" id="feature-search">
               <label class="form-control">
@@ -58,7 +57,7 @@
                 </div>
                 <div
                   id="searchInput"
-                  class="flex items-center justify-center mb-4"
+                  class="flex gap-x-4"
                 >
                   <input
                     type="text"
@@ -66,12 +65,12 @@
                     placeholder="Masukkan NIK"
                     maxlength="16"
                     required
-                    class="input input-bordered w-full"
+                    class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                   />
 
                   <button
                     id="searchBtn"
-                    class="rounded-md px-4 py-2 focus:outline-none"
+                    class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     <i class="fas fa-search"></i>
                   </button>
@@ -79,7 +78,6 @@
               </label>
             </div>
           </main>
-          <h1 class="text-5xl">&nbsp;</h1>
           <div id="result">
             <h4>Regional / Wilayah: <span id="regResult"></span></h4>
             <h4>Provinsi: <span id="provResult"></span></h4>
@@ -102,7 +100,6 @@
               Urutan dalam satu wilayah kecamatan: <span id="unikResult"></span>
             </h4>
           </div>
-          <h1 class="text-5xl">&nbsp;</h1>
           <footer>
             <p class="text-center">
               Dibangun oleh
